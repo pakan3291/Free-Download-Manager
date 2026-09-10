@@ -1,9 +1,11 @@
 import sys
 
 from PySide6.QtGui import QGuiApplication
+from PySide6.QtQuickControls2 import QQuickStyle
 from PySide6.QtQml import QQmlApplicationEngine
 
 app = QGuiApplication(sys.argv)
+QQuickStyle.setStyle("Basic")
 
 engine = QQmlApplicationEngine()
 engine.load(f'qml/Main.qml')
